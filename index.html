@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <title>Document</title>
+    <style>
+        *{
+    box-sizing:border-box;
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type:none;
+}
+
+body{
+    background-color: hsla(0,100%,50%,1);
+    background-image: radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%), radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%), radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%), radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%), radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: grid;
+    align-items: center;
+}
+
+main{
+    background-color:#000;
+    height: auto;
+    padding: 5px;
+    margin: 12px auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+    color: #f5f5f5;
+    border-radius:5px;
+}
+
+.title{
+    text-align: center;
+}
+
+.all-item{
+    margin: 12px 3px;
+}
+
+.same{
+    display: flex;
+    flex-direction: column;
+    margin:12px 3px;
+    gap:5px;
+}
+
+.items{
+    flex-direction: column;
+    display: flex;
+}
+
+input{
+    outline:none;
+    height: 30px;
+    border:none;
+    background-color:#fff;
+    color:black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+textarea{
+    border:none;
+    color:#000;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 20px;
+    outline: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 6px 0px;
+}
+
+.prop{
+    padding:5px;
+}
+
+#work{
+    width: 22.5px;
+    height: 22.5px;
+    border: none;
+    outline: none;
+    box-shadow: rgb(0 0 0 / 16%) 0px 3px 6px, rgb(0 0 0 / 23%) 0px 3px 6px;
+    color: whitesmoke;
+    background-color: #000;
+    border-radius: 7px;
+}
+
+#send{
+    width: 100%;
+    height: 30px;
+    margin:4px auto;
+    border-radius:6px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-color:#0d6efd;
+    color: #ffff;
+    border:none;
+}
+
+#send:focus{
+    box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+    background-color:#0d6efd;
+    border-color: #0d6efd;
+}
+
+.nav-bar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    justify-content: center;
+    backdrop-filter: saturate(100%) blur(20px);
+    top: 0px;
+    bottom: 0px;
+    padding:5px;
+    z-index:1;
+}
+.navbar{
+    width: 86%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 3px;
+}
+.text{
+    color:black;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav-ul{
+    z-index: 1;
+    position: fixed;
+    height: 100vh;
+    width: 290px;
+    background-color: #000;
+    transition: all linear 500ms;
+    transform: translate(-300px);
+    top: 52.5px;
+    bottom: -42px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lists{
+    margin: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.lists>a {
+    text-decoration: none;
+    color: white;
+}
+
+.lists{
+    transition: 250ms linear;
+    display: flex;
+    margin: 36px 6px;
+    gap: 6px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lists:hover{
+    transition:250ms linear;
+    transform:scale(.990);
+}
+
+.btn{
+    text-align: end;
+    position: relative;
+    right:5px;
+    top:5px;
+}
+
+#remv{
+    width: 20px;
+    height: 20px;
+    border:none;
+    outline:none;
+    background-color:black;
+    color:whitesmoke
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+select{
+    outline:none;
+    height: 30px;
+    border:none;
+    background-color:#fff;
+    color:black;
+    padding: 5px;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <header class="nav-bar">
+        <div class="navbar">
+            <div class="text">
+                <a href="index.html" class="text">
+                    <i class="fa-solid fa-file-code fa-2x"></i>
+                    <span>serDEV40</span>
+                </a>
+            </div>
+            <!--  -->
+            <div class="prop">
+                <button id="work"type="submit">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+    <nav class="nav-ul">
+        <div class="btn">
+            <button type="submit"id="remv">
+                <i class="fa-solid fa-xmark fa-2"></i>
+            </button>
+        </div>
+        <ul>
+            <li class="lists">
+                <i class="fa-solid fa-house" style="margin:0px 5px;"></i>
+                <a href="index.html">Ana Sayfa</a>
+            </li>
+            <li class="lists">
+                <i class="fa-solid fa-fax" style="margin:0px 5px;"></i>
+                <a href="contact.html">İletişim</a>
+            </li>
+            <li class="lists">
+                <i class="fa-solid fa-gamepad" style="margin:0px 5px;"></i>
+                <a href="games.html">Beğendiğim Oyunlar</a>
+            </li>
+            <li class="lists">
+                <i class="fa-solid fa-images" style="margin:0px 5px;"></i>
+                <a href="photos.html">Beğendiğim Fotoğraflar</a>
+            </li>
+        </ul>
+    </nav>
+    <!--  -->
+    <main>
+        <div class="tablo">
+            <form   action="https://formspree.io/f/meqnwzpd" method="POST">
+                <div class="title">
+                    <span><h3>Registration</h3></span>
+                </div>
+                <div class="all-item">
+                    <div class="title_1">
+                        <span><h4>Personal Details</h4></span>
+                    </div>
+                    <div class="items">
+                        <div class="item-1">
+                            <div class="same">
+                                <label for="name">İsim Soyisim</label>
+                                <input type="text" id="name" placeholder="Enter Your Name" name="name">
+                            </div>
+                            <div class="same">
+                                <label for="Birth">Doğum Tarihi</label>
+                                <input type="date" id="Birth" placeholder="Enter Your Birth" name="Birth">
+                            </div>
+                            <div class="same">
+                                <label for="mail">E-mail Adresi</label>
+                                <input type="email" id="mail" placeholder="Enter Your E-mail" name="email">
+                            </div>
+                        </div>  
+                        <div class="item-2">
+                            <div class="same">
+                                <label for="number">Cep Telefon Numarası</label>
+                                <input type="tel" id="number" placeholder="Enter Your Number" name="number">
+                            </div>
+                            <div class="same">
+                                <label for="gndr">Cinsiyet</label>
+                                <select type="search" id="gndr" placeholder="Enter Your Gender" name="gndr">
+                                    <option value="01">Female</option>
+                                    <option value="02">Male</option>
+                                </select>
+                            </div>
+                            <div class="same">
+                                <label for="ocptn">Meslek</label>
+                                <input type="text" id="ocptn" placeholder="Enter Your Occupation" name="ocptn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin: 6px 3px;">
+                    <div class="title_1">
+                        <span><h4>İstek Kutusu</h4></span>
+                    </div>
+                    <div class="items copmt">
+                        <label for="compt">Şikayet, Dilekçe ve Rapor Kutusu</label>
+                        <textarea name="complaint" id="compt" cols="30" rows="10" placeholder="Zorunlu Değil"></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="send">SEND</button>
+            </form>
+        </div>
+    </main>
+  <script>
+    const actv = document.querySelector("#work");
+const remv = document.querySelector("#remv");
+const navb = document.querySelector(".nav-ul")
+
+actv.addEventListener("click",()=>{
+   navb.style.transform ="translate(0px)"
+})
+
+remv.addEventListener("click",()=>{
+    navb.style.transform="translate(-300px)"
+})
+
+const inputs = document.querySelectorAll("input");
+const phone = document.querySelector("#number");
+const mail = document.querySelector("#mail");
+
+function updateColor(){
+    inputs.forEach(input=>{
+        if(input.value != ""){
+            input.style.outline = "solid 1.25px green";
+        }
+        else{
+            input.style.outline = "solid 1.25px red"
+        }
+        if(phone.value.length >= 10){
+            phone.style.outline = "solid 1.25px green";
+        }
+        if(mail.value.includes(".com")){
+            phone.style.outline = "solid 1.25px green";
+        }
+        else{
+            phone.style.outline = "solid 1.25px red";
+        }
+    });
+    setTimeout(function(){
+        updateColor()
+    },1000)
+    
+}
+updateColor();
+  </script>
+</body>
+</html>
